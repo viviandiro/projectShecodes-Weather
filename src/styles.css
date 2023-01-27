@@ -1,0 +1,75 @@
+h1 {
+  text-align: center;
+  color: rgb(0, 153, 255);
+}
+span {
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+.principal {
+  display: block;
+  padding: 1.5rem;
+  margin-right: 25%;
+  margin-left: 25%;
+  border-style: solid;
+  border-color: gray;
+  background-image: url("../images/img2.jpg");
+  background-size: 100%;
+  background-color: transparent;
+}
+span:hover {
+  color: rgb(12, 12, 12);
+  font-weight: bolder;
+}
+.cities {
+  color: white;
+  position: relative;
+  z-index: 3;
+  font-size: 30px;
+  font-family: " Calibri ";
+}
+.day {
+  text-align: left;
+  font-size: 14px;
+}
+.preci {
+  text-align: right;
+  font-size: 14px;
+}
+.text2 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+.grade {
+  font-size: 20px;
+  align-items: flex-start;
+}
+.week {
+  text-align: center;
+}
+.btn1 {
+  background-color: rgb(39, 159, 228);
+  padding: 10px;
+  border: 0;
+  border-radius: 15px;
+  color: white;
+}
+.btn2 {
+  background-color: rgb(39, 228, 42);
+  padding: 10px;
+  border: 0;
+  border-radius: 15px;
+  color: white;
+}
+a:hover {
+  color: rgb(0, 255, 64);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 30px;
+}
+a {
+  font-size: 20px;
+  color: black;
+}
