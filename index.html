@@ -19,58 +19,50 @@
     <br>
     <form action="" id="searchForm">
       <div class="row">
-        <div class=" col">
-          <input type="text" class="form-control" id="FormControlInput1" autofocus="on" autocomplete="off" size="10"
+        <div class="col-6">
+          <input type="search" class="form-control" id="FormControlInput1" autofocus="on" autocomplete="off" size="10"
             placeholder="🔎 Enter city  " />
         </div>
         <div class="col">
-          <button class="btn1" id="btn1" type="button">Search</button>
+          <input  value="search" class="btn1" id="btn1" type="submit"/>
           <button class="btn2" id="btn2" type="button">Current</button>
         </div>
       </div>
-      <span class="cities" id="newCity"> Bucaramanga</span><br>
-      <div class="row">
-        <div class="col">
-          <span class="day" id="fecha"> <br> </span>
-        </div>
-        <div class="col">
-          <span class="text2" id="grades">
-          </span>
-          <!-- <a href="" id="celsius" type="button">°C</a>
-          <a href="" id="farenheit" type="button">°F</a> -->
-        </div>
-        <div class="col">
-          <span class="preci"> precipitation: 94% <br> wind: 1 km/h </span>
-        </div>
-      </div>
-      <br><br>
-      <div class="row">
-        <div class="col">
-          <span class="week"> Mon <br> 🌤️ <br> 20°
-        </div>
-        <div class="col">
-          <span class="week"> Tue <br> ☁️ <br> 20°
-        </div>
-        <div class="col">
-          <span class="week"> Wed <br> 🌦️ <br> 20°
-        </div>
-        <div class="col">
-          <span class="week"> Thu <br> ⛈️<br> 20°
-        </div>
-        <div class="col">
-          <span class="week"> Fri <br> 🌧️ <br> 20°
-        </div>
-        <div class="col">
-          <span class="week"> Sat <br> 🌦️<br> 20°
-        </div>
-        <div class="col">
-          <span class="week"> Sun <br> ☀️ <br> 20°
-        </div>
-      </div>
     </form>
+
+      <div class="col">
+        <ul class="list1">
+          <li class="cities" id="newCity"> </li>
+          <li class="day" >  <span id="date"></span></li>
+          <li class="description" id="description"></li>
+        </ul>
+      </div>
+
+
+      <div class="row">
+        <div class="d-flex weather-temperature">
+          <img src="" alt="" id="icon">
+          <span class="text2" id="grades"> </span>
+          <div class="col-grades">
+            <span class="">
+              <a ref="#" id="celsiu" class="active"> °C </a> |
+              <a ref="#" id="farenheit" class="active"> °F</a> </span>
+          </div>
+          <div class="col" id="list2">
+            <ul>
+              <li>Humidity:<span id="hum"></span> % </li>
+              <li>Wind: <span id="wind"></span> km/h </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <br><br>
+   
   </div>
+ <!--  <small class="credit">By Viviana Diaz </small> -->
   <script src="src/scritp.js"></script>
-  <script src="src/time.js"></script>
+ 
 </body>
 
 </html>

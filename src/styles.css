@@ -2,11 +2,8 @@ h1 {
   text-align: center;
   color: rgb(0, 153, 255);
 }
-span {
-  color: white;
-  position: relative;
-  z-index: 3;
-}
+
+ 
 .principal {
   display: block;
   padding: 1.5rem;
@@ -14,16 +11,17 @@ span {
   margin-left: 25%;
   border-style: solid;
   border-color: gray;
-  background-image: url("../images/img2.jpg");
   background-size: 100%;
-  background-color: transparent;
+  border-radius: 10%;
+  background-color: rgb(170, 214, 255);
 }
-span:hover {
-  color: rgb(12, 12, 12);
-  font-weight: bolder;
+
+ul {
+  list-style-type: disc;
+  list-style: none;
 }
 .cities {
-  color: white;
+  color: rgb(95, 92, 92);
   position: relative;
   z-index: 3;
   font-size: 30px;
@@ -33,43 +31,53 @@ span:hover {
   text-align: left;
   font-size: 14px;
 }
-.preci {
-  text-align: right;
-  font-size: 14px;
-}
+
 .text2 {
   text-align: center;
-  color: white;
+  color: rgb(110, 109, 109);
   font-size: 50px;
 }
-.grade {
-  font-size: 20px;
-  align-items: flex-start;
+ .text2:hover {
+  color: rgb(12, 12, 12);
+  font-weight: bolder;
+
 }
+
 .week {
   text-align: center;
 }
 .btn1 {
   background-color: rgb(39, 159, 228);
-  padding: 10px;
+  padding: 7px;
   border: 0;
   border-radius: 15px;
   color: white;
+  width: 100px;
 }
 .btn2 {
   background-color: rgb(39, 228, 42);
-  padding: 10px;
+  padding: 7px;
   border: 0;
   border-radius: 15px;
   color: white;
+  width: 100px;
 }
-a:hover {
-  color: rgb(0, 255, 64);
-  cursor: pointer;
+
+.weather-temperature .active {
+  font-size: 17px;
+  color: rgb(17, 16, 16);
+  cursor: default;
   text-decoration: none;
-  font-size: 30px;
 }
-a {
-  font-size: 20px;
-  color: black;
+.weather-temperature .active:hover {
+  cursor: pointer;
+  font-size: 22px;
+  text-decoration: none;
+} 
+
+li:first-letter{
+  text-transform: capitalize;
 }
+
+
+
