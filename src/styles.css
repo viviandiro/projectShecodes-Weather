@@ -117,3 +117,6 @@ li:first-letter {
 .weather-forecast-temperatures {
   font-size: 13px;
 }
+footer {
+  text-align: center;
+}
