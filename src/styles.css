@@ -1,24 +1,36 @@
+body {
+  background-image: url("images/img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 20px;
+}
 h1 {
   text-align: center;
   color: rgb(0, 153, 255);
 }
 
- 
 .principal {
-  display: block;
   padding: 1.5rem;
-  margin-right: 25%;
-  margin-left: 25%;
-  border-style: solid;
-  border-color: gray;
+  width: 550px;
+  height: 520px;
   background-size: 100%;
   border-radius: 10%;
   background-color: rgb(170, 214, 255);
+  float: left;
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 ul {
   list-style-type: disc;
   list-style: none;
+  font-family: Arial-Narrow;
+}
+.col-dates {
+  font-size: 18px;
+  font-family: Arial-Narrow;
 }
 .cities {
   color: rgb(95, 92, 92);
@@ -37,10 +49,9 @@ ul {
   color: rgb(110, 109, 109);
   font-size: 50px;
 }
- .text2:hover {
+.text2:hover {
   color: rgb(12, 12, 12);
   font-weight: bolder;
-
 }
 
 .week {
@@ -73,11 +84,36 @@ ul {
   cursor: pointer;
   font-size: 22px;
   text-decoration: none;
-} 
-
-li:first-letter{
-  text-transform: capitalize;
+}
+.weather-temperature {
+  display: inline-flex;
+  padding: 5%;
+  text-align: center;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+.forecast {
+  padding: 0%;
+}
 
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
 
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}

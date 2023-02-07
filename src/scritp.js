@@ -26,10 +26,11 @@ function showTemperature(response) {
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 let celsiusTemperature = null;
-
 
 // funcion donde almacenamos la api para buscar la ciudad y sus datos
 function searchCity(city) {
@@ -69,38 +70,74 @@ function displaycelsiu(event) {
   farenElement.classList.add("active");
   celsiuElement.classList.remove("active");
   let temperatureElement = document.querySelector("#grades");
-
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let myForm = document.querySelector("#searchForm");
 myForm.addEventListener("submit", dateCity);
-
 let farenElement = document.querySelector("#farenheit");
 farenElement.addEventListener("click", displayFaren);
 let celsiuElement = document.querySelector("#celsiu");
 celsiuElement.addEventListener("click", displaycelsiu);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+
+
 // funcion de coordenadas de mi localizacion
+function forecast(response) {
+  let forecast = response.data.daily;
+  let forElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  /* let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"]; */
 
-function showPosition(position) {
-  let cityElement = document.querySelector("#newCity");
-  cityElement.innerHTML = city;
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
-  console.log(city);
-  searchCity(city);
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) { 
+    forecastHTML =
+      forecastHTML +
+      ` 
+      
+          <div class="col">
+            <div class="weather-forecast-date">${formatDay(
+              forecastDay.dt
+            )}</div>
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" alt="" width="42" />
+                  <div class="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max"> ${Math.round(
+                      forecastDay.temp.max
+                    )}° </span>
+                    <span class="weather-forecast-temperature-min"> ${Math.round(
+                      forecastDay.temp.min
+                    )}° </span>
+                  </div>
+            </div>
+          
+       `;
+                  }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
-function getCurrentPosition() {
-  navigator.geolocation.getCurrentPosition(showPosition);
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "0f8bc384a7c31b717a18cfe38a95ae06";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(forecast);
 }
 
-/* let myButtonCurrent = document.querySelector("#btn2");
-myButtonCurrent.addEventListener("click", getCurrentPosition); */
-  
 
-// funcion de hora y dia 
+// funcion de hora y dia
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let days = [
@@ -121,12 +158,11 @@ function formatDate(timestamp) {
   hour = hour ? hour : 12;
   minut = minut < 10 ? "0" + minut : minut;
   //muestra el dia y la hora
-  return  `${newDay} ${hour}:${minut} ${newformat}`;
-  
+  return `${newDay} ${hour}:${minut} ${newformat}`;
+
   /* let fech = document.querySelector("li#fech");
   fech.innerHTML =
     newDay + " " + hour + ":" + minut + " " + newformat + " <br>"; 
 } */
-
 }
 searchCity("Bucaramanga");
