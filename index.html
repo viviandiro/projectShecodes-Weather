@@ -20,56 +20,56 @@
     <form action="" id="searchForm">
       <div class="row">
         <div class="col-6">
-          <input type="search" class="form-control" id="FormControlInput1" autofocus="on" autocomplete="off" size="10"
+          <input type="search" class="form-control" id="FormControlInput1" autofocus="on" autocomplete="off" size="20"
             placeholder="🔎 Enter city  " />
         </div>
         <div class="col">
-          <input  value="search" class="btn1" id="btn1" type="submit"/>
+          <input value="search" class="btn1" id="btn1" type="submit" />
           <!-- <button class="btn2" id="btn2" type="button">Current</button> -->
         </div>
       </div>
     </form>
 
-      <div class="col">
-        <ul class="list1">
-          <li class="cities" id="newCity"> </li>
-          <li class="day" >  <span id="date"></span></li>
-          <li class="description" id="description"></li>
+    <div class="col">
+      <ul class="list1">
+        <li class="cities" id="newCity"> </li>
+        <li class="day"> <span id="date"></span></li>
+        <li class="description" id="description"></li>
+      </ul>
+    </div>
+
+
+
+    <div class=" weather-temperature">
+      <img class="iconPrindipal " src="" alt="" id="icon">
+      <span class="text2" id="grades"> </span>
+      <div class="col-grades">
+        <a ref="#" id="celsiu" class="active"> °C </a> |
+        <a ref="#" id="farenheit" class="active"> °F</a> </span>
+      </div>
+      <div class="col-dates" id="list2">
+        <ul>
+          <li>Humidity: <span id="hum"></span> % </li>
+          <li>Wind: <span id="wind"></span> km/h </li>
         </ul>
       </div>
+    </div>
 
 
-      <div class="row">
-        <div class="weather-temperature">
-          <img src="" alt="" id="icon">
-          <span class="text2" id="grades"> </span>
-          <div class="col-grades">
-            <span class="">
-              <a ref="#" id="celsiu" class="active"> °C </a> |
-              <a ref="#" id="farenheit" class="active"> °F</a> </span>
-          </div>
-          <div class="col-dates" id="list2">
-            <ul>
-              <li>Humidity: <span id="hum"></span> % </li>
-              <li>Wind: <span id="wind"></span> km/h </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class=" weather-forecast" id ="forecast">
-        </div><br>
-        <hr>
-        
-      <div class="footer">
-        <a href="https://github.com/viviandiro/projectShecodes" target="_blank">open-sourced on GitHub</a>
-        <span class="credit">By Viviana Diaz </span>
-      </div>
-   
+    <div class=" weather-forecast" id="forecast">
+    </div><br>
+
+
   </div>
+  <hr>
+  <div class="footer">
+  <span >
+    <a href="https://github.com/viviandiro/projectShecodes" target="_blank"> <img class="icon-git "src="images/github.png" /></a>
+    <br> By Viviana Diaz </span> </div>
 
-<script src="src/scritp.js"></script>
- 
+
+  <script src="src/scritp.js"></script>
+
 </body>
 
 </html>

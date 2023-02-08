@@ -1,71 +1,70 @@
-
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 20px;
+}
 h1 {
   text-align: center;
   color: rgb(0, 153, 255);
 }
 
 .principal {
-  padding: 1.5rem;
-  width: 550px;
+  padding: 20px;
+  width: 650px;
   height: 550px;
-  background-size: 100%;
   border-radius: 10%;
   background-color: rgb(170, 214, 255);
-  float: left;
-  display: block;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
+}
+.form-control {
+  margin-left: 30px;
+  font-size: 22px;
 }
 
 ul {
   list-style-type: disc;
   list-style: none;
-  font-family: Arial-Narrow;
-}
-.col-dates {
+  font-family: Century Gothic ;
   font-size: 18px;
-  font-family: Arial-Narrow;
 }
+
 .cities {
   color: rgb(95, 92, 92);
   position: relative;
   z-index: 3;
-  font-size: 30px;
-  font-family: " Calibri ";
+  font-size: 35px;
+  font-family: Century Gothic ;
 }
 .day {
   text-align: left;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .text2 {
   text-align: center;
   color: rgb(110, 109, 109);
-  font-size: 50px;
+  font-size: 70px;
+  padding: 15px;
 }
 .text2:hover {
   color: rgb(12, 12, 12);
   font-weight: bolder;
 }
 
-.week {
-  text-align: center;
-}
 .btn1 {
+  margin-left: 20px;
   background-color: rgb(39, 159, 228);
   padding: 7px;
   border: 0;
   border-radius: 15px;
   color: white;
-  width: 100px;
+  width: 120px;
 }
-.btn2 {
-  background-color: rgb(39, 228, 42);
-  padding: 7px;
-  border: 0;
-  border-radius: 15px;
-  color: white;
-  width: 100px;
+.iconPrindipal {
+  width: 130px;
+  height: 140px;
+  
 }
 
 .weather-temperature .active {
@@ -83,6 +82,8 @@ ul {
   display: inline-flex;
   padding: 5%;
   text-align: center;
+  margin-left: 30px;
+  font-family: Century Gothic ;
 }
 
 li:first-letter {
@@ -102,6 +103,7 @@ li:first-letter {
   font-size: 16px;
   opacity: 0.5;
   text-align: center;
+  font-family: Century Gothic ;
 }
 
 .weather-forecast-temperature-min {
@@ -113,5 +115,10 @@ li:first-letter {
 }
 .footer {
   text-align: center;
-  
+  font-family: 'Courier New';
+}
+.icon-git {
+    width: 38px;
+    height: 35px;
+    
 }
