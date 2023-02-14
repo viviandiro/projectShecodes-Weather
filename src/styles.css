@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/img.jpg");
+  background-image: url("../images/img2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -17,9 +17,9 @@ h1 {
   width: 650px;
   height: 550px;
   border-radius: 10%;
-  background-color: rgb(170, 214, 255);
+  
   margin: auto;
-  background: rgba(255, 255, 255, 0.30);
+  background: rgba(46, 43, 43, 0.181);
   backdrop-filter: blur(6.5px);
 }
 .form-control {
@@ -35,22 +35,27 @@ ul {
   list-style: none;
   font-family: Century Gothic;
   font-size: 18px;
+  color: white;
 }
 .list1 {
   text-align: center;
 }
 
 .cities {
-  color: rgb(95, 92, 92);
+  color: white;
   position: relative;
   z-index: 1;
   font-size: 45px;
   font-family: Century Gothic;
 }
+.cities:hover{
+   color: rgb(12, 12, 12);
+   font-weight: bolder;
+}
 
 .text2 {
   text-align: center;
-  color: rgb(110, 109, 109);
+  color: white;
   font-size: 70px;
   padding: 15px;
 }
@@ -75,7 +80,7 @@ ul {
 
 .weather-temperature .active {
   font-size: 17px;
-  color: rgb(17, 16, 16);
+  color: white;
   cursor: default;
   text-decoration: none;
 }
@@ -102,14 +107,15 @@ li:first-letter {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: #000;
+  color: white;
 }
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
+  opacity: 0.8;
   text-align: center;
   font-family: Century Gothic;
+  color: black;
 }
 
 .weather-forecast-temperature-min {
