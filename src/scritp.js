@@ -4,7 +4,7 @@ function showTemperature(response) {
   console.log(response.data);
   console.log(response.data.main.temp);
   console.log(response.data.weather[0].description);
-  console.log(response.data.dt * 1000 + " prueba");
+  console.log(response.data.dt * 1000);
 
   let temperatureElement = document.querySelector("#grades");
   let cityElement = document.querySelector("li#newCity");
@@ -88,8 +88,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-
-
 // funcion de coordenadas de mi localizacion
 function forecast(response) {
   let forecast = response.data.daily;
@@ -98,10 +96,10 @@ function forecast(response) {
   /* let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"]; */
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) { 
-    forecastHTML =
-      forecastHTML +
-      ` 
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` 
       
           <div class="col">
             <div class="weather-forecast-date">${formatDay(
@@ -121,13 +119,12 @@ function forecast(response) {
             </div>
           
        `;
-                  }
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
 }
-
 
 function getForecast(coordinates) {
   console.log(coordinates);
@@ -135,7 +132,6 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(forecast);
 }
-
 
 // funcion de hora y dia
 function formatDate(timestamp) {
