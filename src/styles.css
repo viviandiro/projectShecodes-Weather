@@ -2,8 +2,8 @@ body {
   background-image: url("../images/img2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  margin: 10px;
+  /* background-attachment: fixed;
+  margin: 10px; */
   background-position: 50% 50%;
 }
 h1 {
@@ -14,21 +14,38 @@ h1 {
 }
 
 .principal {
-  padding: 20px;
-  width: 650px;
-  height: 550px;
-  border-radius: 10%;
-  
-  margin: auto;
-  background: rgba(46, 43, 43, 0.181);
-  backdrop-filter: blur(6.5px);
-}
-.form-control {
-  margin-left: 30%;
-  font-size: 22px;
+  padding: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .form-date {
-  display: flex;
+  background: rgba(125, 124, 124, 0.214);
+  backdrop-filter: blur(6.5px);
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 350px;
+  border-radius: 15px;
+
+}
+.form-control {
+  margin-left: 2%;
+  margin-top: 10%;
+  font-size: 22px;
+  width: 50%;
+}
+.btn1 {
+  margin-left: 10%;
+  background-color: rgb(39, 159, 228);
+  padding: 7px;
+  border: 0;
+  border-radius: 15px;
+  color: white;
+  width: 60%;
+  margin-top: 10%;
+}
+.btn1:hover{
+  background-color: rgb(241, 244, 246);
+  color:  rgb(39, 159, 228);
 }
 
 ul {
@@ -37,21 +54,24 @@ ul {
   font-family: Century Gothic;
   font-size: 18px;
   color: white;
-}
-.list1 {
   text-align: center;
 }
 
-.cities {
+.list1{
+  padding: 2%;
+}
+
+.cities{
   color: white;
-  position: relative;
   z-index: 1;
   font-size: 45px;
   font-family: Century Gothic;
+  text-align: center;
+  
 }
-.cities:hover{
-   color: rgb(12, 12, 12);
-   font-weight: bolder;
+.cities:hover {
+  color: rgb(12, 12, 12);
+  font-weight: bolder;
 }
 
 .text2 {
@@ -65,58 +85,62 @@ ul {
   font-weight: bolder;
 }
 
-.btn1 {
-  margin-left: 40%;
-  background-color: rgb(39, 159, 228);
-  padding: 7px;
-  border: 0;
-  border-radius: 15px;
-  color: white;
-  width: 40%;
-}
+
 .iconPrindipal {
   width: 130px;
   height: 140px;
 }
 
 .weather-temperature .active {
-  font-size: 17px;
+  font-size: 30px;
   color: white;
   cursor: default;
   text-decoration: none;
 }
 .weather-temperature .active:hover {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 32px;
   text-decoration: none;
+  color: rgb(22, 21, 21);
 }
 .weather-temperature {
-  display: inline-flex;
   padding: 2%;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
   font-family: Century Gothic;
+  background: rgba(125, 124, 124, 0.214);
+  backdrop-filter: blur(6.5px);
+  border-radius: 15px;
 }
 
 li:first-letter {
   text-transform: capitalize;
 }
-.forecast {
-  padding: 0%;
-}
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   color: white;
 }
 
+div .row .dayforecast {
+  background: rgba(172, 172, 172, 0.211);
+  backdrop-filter: blur(6.5px);
+  padding: 1%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10%;
+}
+div .row .dayforecast:hover{
+  font-size: 30px;
+  color: aqua;
+}
 .weather-forecast-date {
   font-size: 16px;
   opacity: 0.8;
   text-align: center;
   font-family: Century Gothic;
-  color: white;
 }
 
 .weather-forecast-temperature-min {

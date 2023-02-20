@@ -92,7 +92,7 @@ function formatDay(timestamp) {
 function forecast(response) {
   let forecast = response.data.daily;
   let forElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="m-0 row justify-content-center">`;
   /* let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"]; */
 
   forecast.forEach(function (forecastDay, index) {
@@ -101,7 +101,7 @@ function forecast(response) {
         forecastHTML +
         ` 
       
-          <div class="col">
+          <div class="col dayforecast">
             <div class="weather-forecast-date">${formatDay(
               forecastDay.dt
             )}</div>
@@ -116,8 +116,8 @@ function forecast(response) {
                       forecastDay.temp.min
                     )}° </span>
                   </div>
-            </div>
-          
+             </div>
+         
        `;
     }
   });
