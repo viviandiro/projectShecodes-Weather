@@ -1,16 +1,20 @@
-body {
-  background-image: url("../images/img2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.body {
+  /*background-image: url("../images/img1.jpg");*/
+  background-color: rgba(0, 0, 0, 0.952);
+
   /* background-attachment: fixed;
-  margin: 10px; */
-  background-position: 50% 50%;
+  margin: 10px; 
+  background-position: 20% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;*/
 }
 h1 {
   padding: 1%;
   font-family: Century Gothic;
   text-align: center;
-  color: white;
+  color: rgb(30, 168, 248);
+  size: 50px;
+  font-weight: bolder;
 }
 
 .principal {
@@ -19,14 +23,26 @@ h1 {
   margin-right: 20%;
 }
 .form-date {
-  background: rgba(125, 124, 124, 0.214);
-  backdrop-filter: blur(6.5px);
+  /*background: rgba(125, 124, 124, 0.214);
+  /* backdrop-filter: blur(6.5px);*/
   margin-left: 5%;
   margin-right: 5%;
   height: 350px;
   border-radius: 15px;
-
 }
+.Cont-Principal {
+  background-image: url("../images/img1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  /*background: rgba(160, 160, 160, 0.214);
+  backdrop-filter: blur(6.5px);*/
+  box-shadow: 0 0 3em 0 rgb(25, 140, 211);
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 15px;
+}
+
 .form-control {
   margin-left: 2%;
   margin-top: 10%;
@@ -43,9 +59,9 @@ h1 {
   width: 60%;
   margin-top: 10%;
 }
-.btn1:hover{
+.btn1:hover {
   background-color: rgb(241, 244, 246);
-  color:  rgb(39, 159, 228);
+  color: rgb(39, 159, 228);
 }
 
 ul {
@@ -57,20 +73,19 @@ ul {
   text-align: center;
 }
 
-.list1{
+.list1 {
   padding: 2%;
 }
 
-.cities{
+.cities {
   color: white;
   z-index: 1;
   font-size: 45px;
   font-family: Century Gothic;
   text-align: center;
-  
 }
 .cities:hover {
-  color: rgb(12, 12, 12);
+  color: rgb(39, 159, 228);
   font-weight: bolder;
 }
 
@@ -81,10 +96,9 @@ ul {
   padding: 15px;
 }
 .text2:hover {
-  color: rgb(12, 12, 12);
+  color: rgb(39, 159, 228);
   font-weight: bolder;
 }
-
 
 .iconPrindipal {
   width: 130px;
@@ -101,7 +115,7 @@ ul {
   cursor: pointer;
   font-size: 32px;
   text-decoration: none;
-  color: rgb(22, 21, 21);
+  color: rgb(39, 159, 228);
 }
 .weather-temperature {
   padding: 2%;
@@ -109,8 +123,8 @@ ul {
   margin-left: 5%;
   margin-right: 5%;
   font-family: Century Gothic;
-  background: rgba(125, 124, 124, 0.214);
-  backdrop-filter: blur(6.5px);
+  /*background: rgba(125, 124, 124, 0.214);
+  backdrop-filter: blur(6.5px);*/
   border-radius: 15px;
 }
 
@@ -125,16 +139,16 @@ li:first-letter {
 }
 
 div .row .dayforecast {
-  background: rgba(172, 172, 172, 0.211);
-  backdrop-filter: blur(6.5px);
+  /* background: rgba(172, 172, 172, 0.211);
+  backdrop-filter: blur(6.5px);*/
   padding: 1%;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 10%;
 }
-div .row .dayforecast:hover{
-  font-size: 30px;
-  color: aqua;
+div .row .dayforecast:hover {
+  /*font-size: 30px;*/
+  color: rgb(39, 159, 228);
 }
 .weather-forecast-date {
   font-size: 16px;
