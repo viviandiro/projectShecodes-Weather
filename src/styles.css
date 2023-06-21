@@ -107,7 +107,7 @@ ul {
 
 .weather-temperature .active {
   font-size: 30px;
-  color: white;
+  color: black;
   cursor: default;
   text-decoration: none;
 }
